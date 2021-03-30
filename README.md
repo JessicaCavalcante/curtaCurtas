@@ -144,11 +144,53 @@ Para a estrutura do nosso modelo de négocio, e avaliação de nossa aplicação
 * Marvel
 * Figma
 
-## 6. Créditos
+## 6. Como rodar localmente
+
+1. Antes de mais nada, se assegure de ter um bom 📝 editor de texto, algo como o Visual Studio Code ou Atom.
+2. Para executar os comandos você precisará de um 🐚 UNIX Shell, que é um programa que interpreta linhas de comando (command-line interpreter) e também deve ter o git instalado. Se você usa um sistema operacional "UNIX-like", como GNU/Linux ou MacOS, você já tem um shell (terminal) instalado (e provavelmente o git também). Se você usa Windows pode baixar a versão completa do Cmder que inclue o Git bash, embora seja recomendado que você teste 🐧 GNU/Linux. Se tem Windows 10 ou superior pode usar o Windows Subsystem for Linux.
+3. Faça o 🍴 fork desse repositório.
+4. ⬇️ Clone o fork para seu computador (cópia local).
+5. 📦 Instale as dependências do projeto rodando o comando npm install. Mas antes disso tenha certeza de ter instalado o Node.js (que inclui o npm).
+
+### Instalação do Firebase
+
+Este projeto está configurado para rodar por meio do servidor do Firebase. Para isso, será necessário possuir o Firebase CLI instalado globalmente em sua máquina. Utilize o comando npm install -g firebase-tools
+
+Inicie um novo projeto web no console do Firebase (pode desabilitar o analytics).
+
+Caso apareça a opção de habilitar o Hosting na tela seguinte, selecionar.
+
+Clique no menu lateral Cloud Firestore para criar uma nova database como production mode e escolher a região us-east1.
+
+##### IMPORTANTE rodar todos os comandos do Firebase no terminal a partir da pasta raiz do projeto.
+
+Executar o comando firebase login e realizar o login por meio de uma conta Google - deve abrir uma janela automaticamente, se não abrir pode clicar no link que vai aparecer no console.
+
+Executar o comando firebase init para iniciar o setup do projeto.
+
+Selecionar Hosting (aperte espaço para selecionar essa opção e depois enter).
+
+Selecionar Use an existing project (o terminal vai mostrar o nome do projeto que você acabou de criar no site do Firebase).
+
+Escrever src para definir como public directory (o padrão vai estar como public).
+
+Escrever y para selecionar como SPA.
+
+Escrever N para não fazer builds e deploys automáticos com GitHub.
+
+O Firebase vai dizer que src/index.html já existe e pergunta se quer sobrescrever. Sugiro dar N, para não sobrescrever o index.html.
+
+Se der tudo certo, o Firebase vai criar o arquivo .firebaserc de configuração na pasta do projeto.
+
+Instale as dependências do projeto rodando o comando npm install.
+
+Para iniciar sua aplicação web, use o comando npm start. Com esse comando, você deve ver em http://localhost:5000 uma página padrão do Firebase, que está sendo renderizada de src/index.html.
+
+## 7. Créditos
 * [Laboratoria](https://www.laboratoria.la/) :yellow_heart:
 * [Open Movies Database API](http://www.omdbapi.com/)
 
-## 7. Desenvolvedoras
+## 8. Desenvolvedoras
 :princess: [Beatriz Penalva](https://github.com/beatrizpenalva);
 
 &nbsp;
